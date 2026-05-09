@@ -1,0 +1,23 @@
+{
+  "benchmark_settings": {
+    "mode": "AverageTime",
+    "time_unit": "MILLISECONDS",
+    "forks": 1,
+    "warmup_iterations": 2,
+    "measurement_iterations": 25,
+    "output_csv": "results.csv",
+    "gc_profiler": true
+  },
+  "sut_parameters": {
+    "expiring_cache": {
+      "ttl_ms": 100
+    },
+    "retry_service": {
+      "max_attempts": 3,
+      "delay_ms": 500
+    },
+    "async_processor": {
+      "delay_ms": 1000
+    }
+  }
+}
